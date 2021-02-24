@@ -109,6 +109,23 @@ Bot.onReady = function() {
 	this.preformInitialization();
 };
 
+bot.once('ready', async () => {
+    console.log("Bot is ready! ");
+    let StatusMessage = '*help | '
+    var Status = ["Currently vibing", "To get Admin", "For Skills", "Please use me ;(", "its not that hard", "to get minecraft bf/gf", "to delete reddit", "for free wifi everywhere you go!", "to get robux", "to get vbucks", "to go outside", "Message Effanix#5220 if you need help", "Corn", "to touch grass", "you have been warned", "to get discord nitro", "to get scammed", "i pinged @everyone once :)", "to remove penis priveleges", "to update these outdated status messages", "to suggest me new ideas", "i am running out of ideas for status messages", "19 Dollar Fortnite Card", "to vibe", "to report me for abuse"]
+    var ranStat = Math.floor(Math.random() * Status.length);
+    StatusMessage += Status[ranStat]
+    bot.user.setActivity(StatusMessage);
+setInterval(() => {
+        let StatusMessage = '*help | '
+        var Status = ["Currently vibing", "To get Admin", "For Skills", "Please use me ;(", "its not that hard", "to get minecraft bf/gf", "to delete reddit", "for free wifi everywhere you go!", "to get robux", "to get vbucks", "to go outside", "Message Effanix#5220 if you need help", "Corn", "to touch grass", "you have been warned", "to get discord nitro", "to get scammed", "i pinged @everyone once :)", "to remove penis priveleges", "to update these outdated status messages", "to suggest me new ideas", "i am running out of ideas for status messages", "19 Dollar Fortnite Card", "to vibe", "to report me for abuse"]
+		var ranStat = Math.floor(Math.random() * Status.length);
+        StatusMessage += Status[ranStat]
+        bot.user.setActivity(StatusMessage);
+}, 30000);
+});
+
+
 Bot.restoreVariables = function() {
 	Files.restoreServerVariables();
 	Files.restoreGlobalVariables();
